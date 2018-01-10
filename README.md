@@ -25,12 +25,15 @@ ___
 
 ### Installing the prerequisites ###
 * Install Python and XML libraries
-  * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio python-dev`
+  * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio python-dev git`
 * Install a few necessary Python packages:
   * Run `sudo pip3 install natural`
   * Run `sudo pip3 install ip2geotools`
   * Run `sudo pip3 install simplejson`
 * Setup Blinkt! LED
-  * Run `curl https://get.pimoroni.com/blinkt | sudo bash`
+  * Run `git clone http://github.com/pimoroni/blinkt`
+  * Run `cd blinkt/library`
+  * Run `sudo python3 setup.py install`
+  * Run `cd ~`
 
 ___
