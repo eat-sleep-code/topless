@@ -1,0 +1,10 @@
+{
+    "apiKey": "YOUR OPENWEATHERMAP API KEY GOES HERE",
+    "thresholds": {
+        "temperature": {
+            "low": 40,
+            "high": 90
+        }
+    },
+    "units": "F"
+}
