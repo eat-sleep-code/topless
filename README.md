@@ -32,8 +32,7 @@ ___
 * Install Python and XML libraries
   * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio python-dev git`
 * Install a few necessary Python packages:
-  * Run `sudo pip3 install ip2geotools`
-  * Run `sudo pip3 install simplejson`
+  * Run `sudo pip3 install requests ip2geotools simplejson`
 * Setup Blinkt! LED
   * Run `git clone http://github.com/pimoroni/blinkt`
   * Run `cd blinkt/library`
@@ -43,7 +42,7 @@ ___
 
 ### Go topless! ###
 * Sign up for a free API key at https://home.openweathermap.org/users/sign_up
-* Run `sudo git clone https://github.com/eat-sleep-code/topless`
+* Run `git clone https://github.com/eat-sleep-code/topless`
 * Run `sudo nano topless/config.json`
 * Add our API key and change any other applicable settings
 * Run `python topless/topless.py --location [ZIP Code]`   _for example: `python topless/topless.py --location 90210`_
