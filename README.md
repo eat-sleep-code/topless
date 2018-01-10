@@ -5,7 +5,7 @@ Each LED represents a 3 hour window.   A green LED means that there is no rain p
 
 Cold blooded?  Don't mind the dry heat?  You can set the temperature thresholds to set your personal preferences in the `config.json` file.
 
-![alt text](/eat-sleep-code/topless/blob/master/topless.jpg)
+![alt text](https://github.com/eat-sleep-code/topless/blob/master/topless.jpg)
 
 ___
 
