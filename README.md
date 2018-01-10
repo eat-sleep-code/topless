@@ -61,3 +61,6 @@ Want to go topless every time you boot your Raspberry Pi?  Here is how!
     * `@reboot sudo python topless/topless.py --location 90210 &`
     * `0 1 * * * sudo python topless/topless.py --location 90210 &`
 ___
+
+
+Jeep, the Jeep logo, and the Jeep grille are registered trademarks of FCA US LLC. Throughout this Github repository all the preceding marks and logos are used for identification purposes only. Github and eat-sleep-code are not affiliated with FCA US LLC. Other trademarks used throughout this website are the property of their respective owners and are used for identification purposes only.
