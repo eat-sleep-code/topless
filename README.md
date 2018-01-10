@@ -48,7 +48,7 @@ ___
 * Sign up for a free API key at https://home.openweathermap.org/users/sign_up
 * Run `git clone https://github.com/eat-sleep-code/topless`
 * Run `sudo nano topless/config.json`
-* Add our API key and change any other applicable settings
+* Add your [API key](https://home.openweathermap.org/users/sign_up) and change any other applicable settings
 * Run `python topless/topless.py --location [ZIP Code]`   _for example: `python topless/topless.py --location 90210`_
     * Alternatively, you can let the program use geolocation to detect your location: `python topless/topless.py`
 ___
