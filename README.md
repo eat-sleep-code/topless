@@ -44,7 +44,7 @@ ___
 ### Go topless! ###
 * Sign up for a free API key at https://home.openweathermap.org/users/sign_up
 * Run `sudo git clone https://github.com/eat-sleep-code/topless`
-* Run `sudo nano topless/config.json`
+* Run `sudo nano config.json`
 * Add our API key and change any other applicable settings
 * Run `python topless/topless.py --location [ZIP Code]`   _for example: `python topless/topless.py --location 90210`_
     * Alternatively, you can let the program use geolocation to detect your location: `python topless/topless.py`
@@ -55,6 +55,6 @@ Want to go topless every time you boot your Raspberry Pi?  Here is how!
 * Run `sudo crontab -e`
 * Select `nano`[\*\*](https://www.nano-editor.org/dist/v2.8/nano.html)
 * Scroll to the bottom of the file and add these two lines:
-    * `@reboot sudo python topless/topless.py --location 90210 &`
-    * `0 1 * * * sudo python topless/topless.py --location 90210 &`
+    * `@reboot sudo python topless.py --location 90210 &`
+    * `0 1 * * * sudo python topless.py --location 90210 &`
 ___
