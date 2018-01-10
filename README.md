@@ -1,9 +1,14 @@
 # Topless
+Do you drive a Jeep CJ or Wrangler?  Have you ever been caught in a deluge with the top down?   Yeah, we really didn't need to ask that question.   It is a Jeep thing.   We understand.   With this handy device, you will be able to get a quick visual of the weather before you ever leave your house in the morning.
+
+Each LED represents a 3 hour window.   A green LED means that there is no rain predicted for that time period.   A blue LED means showers are on the way.   An orange LED means it might be a bit too sweltering to drive topless.    And a white LED -- you guessed it -- means that it is going to be freezing cold (or snow is on the way).
+
+Cold blooded?  Don't mind the dry heat?  You can set the temperature thresholds to set your personal preferences in the `config.json` file.
 
 ## Hardware Requirements
 * [Raspberry Pi Zero W](https://www.adafruit.com/product/3400)
 * [GPIO Male Headers](https://www.adafruit.com/product/3413)
-* [Blinkt! LED] https://www.adafruit.com/product/3195
+* [Blinkt! LED](https://www.adafruit.com/product/3195)
 
 ___
 
@@ -35,5 +40,22 @@ ___
   * Run `cd blinkt/library`
   * Run `sudo python3 setup.py install`
   * Run `cd ~`
+___
 
+### Go topless! ###
+* Sign up for a free API key at https://home.openweathermap.org/users/sign_up
+* Run `sudo git clone https://github.com/eat-sleep-code/topless`
+* Run `sudo nano topless/config.json`
+* Add our API key and change any other applicable settings
+* Run `python topless/topless.py --location [ZIP Code]`   _for example: `python topless/topless.py --location 90210`_
+    * Alternatively, you can let the program use geolocation to detect your location: `python topless/topless.py`
+___
+
+### Autorun ###
+Want to go topless every time you boot your Raspberry Pi?  Here is how!
+* Run `sudo crontab -e`
+* Select `nano`[\*\*](https://www.nano-editor.org/dist/v2.8/nano.html)
+* Scroll to the bottom of the file and add these two lines:
+    * `@reboot sudo python topless/topless.py --location 90210 &`
+    * `0 1 * * * sudo python topless/topless.py --location 90210 &`
 ___
