@@ -5,6 +5,10 @@ Each LED represents a 3 hour window.   A green LED means that there is no rain p
 
 Cold blooded?  Don't mind the dry heat?  You can set the temperature thresholds to set your personal preferences in the `config.json` file.
 
+![alt text](topless/topless.jpg)
+
+___
+
 ## Hardware Requirements
 * [Raspberry Pi Zero W](https://www.adafruit.com/product/3400)
 * [GPIO Male Headers](https://www.adafruit.com/product/3413)
