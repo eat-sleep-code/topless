@@ -25,10 +25,8 @@ ___
 
 ### Installing the prerequisites ###
 * Install Python and XML libraries
-  * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio libxml2-dev libxslt-dev python-dev python3-lxml`
-  * Run `sudo apt-get build-dep python3-lxml`
-* Install the LXML and Natural packages:
-  * Run `sudo pip3 install lxml`
+  * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio python-dev`
+* Install a few necessary Python packages:
   * Run `sudo pip3 install natural`
   * Run `sudo pip3 install ip2geotools`
   * Run `sudo pip3 install simplejson`
