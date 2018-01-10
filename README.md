@@ -1,7 +1,7 @@
 # Topless
 Do you drive a Jeep CJ or Wrangler?  Have you ever been caught in a deluge with the top down?   Yeah, we really didn't need to ask that question.   It is a Jeep thing.   We understand.   With this handy device, you will be able to get a quick visual of the weather before you ever leave your house in the morning.
 
-Each LED represents a 3 hour window.   A green LED means that there is no rain predicted for that time period.   A blue LED means showers are on the way.   An orange LED means it might be a bit too sweltering to drive topless.    And a white LED -- you guessed it -- means that it is going to be freezing cold (or snow is on the way).
+Each super-bright LED represents a 3 hour window.   A green LED means that there is no rain predicted for that time period.   A blue LED means showers are on the way.   An orange LED means it might be a bit too sweltering to drive topless.    And a white LED -- you guessed it -- means that it is going to be freezing cold (or snow is on the way).
 
 Cold blooded?  Don't mind the dry heat?  You can set the temperature thresholds to set your personal preferences in the `config.json` file.
 
