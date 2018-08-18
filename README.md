@@ -70,7 +70,7 @@ User=pi
 
 [Install]
 WantedBy=multi-user.target
-```
+````
 * Run `sudo systemctl enable topless.service`
 * Run `sudo systemctl start topless.service`
 * Run `sudo reboot`
