@@ -55,11 +55,25 @@ ___
 
 ### Autorun ###
 Want to go topless every time you boot your Raspberry Pi?  Here is how!
-* Run `sudo crontab -e`
-* Select `nano`[\*\*](https://www.nano-editor.org/dist/v2.8/nano.html)
-* Scroll to the bottom of the file and add these two lines:
-    * `@reboot sudo python topless/topless.py --location 90210 &`
-    * `0 1 * * * sudo python topless/topless.py --location 90210 &`
+* Run `sudo nano /etc/systemd/system/topless.service`[\*\*](https://www.nano-editor.org/dist/v2.8/nano.html) and enter the following lines: 
+````
+[Unit]
+Description=Topless service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/topless/topless.py --location 90210
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Topless
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+* Run `sudo systemctl enable topless.service`
+* Run `sudo systemctl start topless.service`
+* Run `sudo reboot`
 ___
 
 
