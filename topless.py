@@ -1,18 +1,17 @@
 # Sign up for a free API key at https://home.openweathermap.org/users/sign_up
 import argparse
 import array
+import datetime
 import itertools
 import os
 import requests
 import simplejson as json
 import time
-from ip2geotools.databases.noncommercial import Freegeoip
 from blinkt import set_pixel, set_brightness, show, clear, get_pixel
 
 while True:
     try:
         print("Going topless...")
-
         # CONFIGURATION
         config = open(os.path.dirname(os.path.abspath(__file__)) + '/config.json').read()
         configJson = json.loads(config)
@@ -32,11 +31,11 @@ while True:
         if (args.location): 
             url =  "https://api.openweathermap.org/data/2.5/forecast?zip=" + args.location
         else:
-            currentIP = requests.get("http://ipecho.net/plain?").text
+            currentIP = requests.get("https://ipapi.co/ip").text
             # print(currentIP)
-            currentLocation = Freegeoip.get(currentIP)
+            currentLocation = requests.get("https://ipapi.co/"+currentIP+"/postal/").text
             # print(currentLocation)
-            url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + str(currentLocation.latitude) + "&lon=" + str(currentLocation.longitude)
+            url = "https://api.openweathermap.org/data/2.5/forecast?zip=" + currentLocation
 
         # Metric or Imperial?
         if (units.startswith("m") or units.startswith("c")):
@@ -49,6 +48,9 @@ while True:
         #print(url)
 
         while True: 
+			now = datetime.datetime.now()
+			datestamp = now.strftime("%Y-%m-%d %-I:%M%p")
+			print("Updating forecast for " + currentLocation + " at: " + datestamp)
             timer = time.time()
             ledEffect = []
             # get forecast
@@ -147,7 +149,7 @@ while True:
                 show()
                 ledID += 1
 
-            while time.time() - timer < 600:
+            while time.time() - timer < 300:
                 ledToManipulate = 0
                 while ledToManipulate < 8:
                     priorPixelValue = (get_pixel(ledToManipulate))
@@ -168,10 +170,6 @@ while True:
                     else:
                         time.sleep(0.05)
                     ledToManipulate += 1
-    except:
-        print("Please wait...")
-    time.sleep(15)
-
-
-
-
+    except Exception as ex:
+        print("Please wait..." + ex)
+    time.sleep(300)
