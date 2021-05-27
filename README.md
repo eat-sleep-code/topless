@@ -36,7 +36,7 @@ ___
 * Install Python and XML libraries
   * Run `sudo apt-get install python3 ipython3 python3-pip python3-rpi.gpio python-dev git`
 * Install a few necessary Python packages:
-  * Run `sudo pip3 install requests simplejson`
+  * Run `sudo pip3 install requests simplejson --force`
 * Setup Blinkt! LED
   * Run `git clone http://github.com/pimoroni/blinkt`
   * Run `cd blinkt/library`
